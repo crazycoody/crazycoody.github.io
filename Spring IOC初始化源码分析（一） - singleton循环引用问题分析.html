@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Spring IOC,Spring,">
+  <meta name="keywords" content="Java, Spring, Spring IOC, 源码分析, 循环依赖, 容器">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="概述假设有两个对象A和B，A在初始化过程中引用B，B在初始化过程中引用A，其中一种方式是在构造器中的循环引用，即在A的构造器中将传入的B实例赋值给A.b，在B的构造器中将传入的A实例赋值给B.a， 另外一种是在构造器外进行循环引用，等构造器初始完成之后，通过属性设置方式进行引用赋值。那spring是否支持这两种场景循环引用？如果支持，是如何实现的呢？ 构造器循环引用首先看如下代码：    publ">
-<meta name="keywords" content="Spring IOC,Spring">
+<meta name="description" content="Spring IOC初始化及bean依赖关系剖析">
+<meta name="keywords" content="Java, Spring, Spring IOC, 源码分析, 循环依赖, 容器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Spring] Spring IOC初始化源码分析（一） - singleton循环引用问题分析">
-<meta property="og:url" content="http://www.gocody.net/9ce2b14f/index.html">
+<meta property="og:url" content="http://www.gocody.net/Spring IOC初始化源码分析（一） - singleton循环引用问题分析.html">
 <meta property="og:site_name" content="Cody&#39;s Blog">
-<meta property="og:description" content="概述假设有两个对象A和B，A在初始化过程中引用B，B在初始化过程中引用A，其中一种方式是在构造器中的循环引用，即在A的构造器中将传入的B实例赋值给A.b，在B的构造器中将传入的A实例赋值给B.a， 另外一种是在构造器外进行循环引用，等构造器初始完成之后，通过属性设置方式进行引用赋值。那spring是否支持这两种场景循环引用？如果支持，是如何实现的呢？ 构造器循环引用首先看如下代码：    publ">
+<meta property="og:description" content="Spring IOC初始化及bean依赖关系剖析">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T07:03:29.269Z">
+<meta property="og:updated_time" content="2018-09-11T07:33:02.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Spring] Spring IOC初始化源码分析（一） - singleton循环引用问题分析">
-<meta name="twitter:description" content="概述假设有两个对象A和B，A在初始化过程中引用B，B在初始化过程中引用A，其中一种方式是在构造器中的循环引用，即在A的构造器中将传入的B实例赋值给A.b，在B的构造器中将传入的A实例赋值给B.a， 另外一种是在构造器外进行循环引用，等构造器初始完成之后，通过属性设置方式进行引用赋值。那spring是否支持这两种场景循环引用？如果支持，是如何实现的呢？ 构造器循环引用首先看如下代码：    publ">
+<meta name="twitter:description" content="Spring IOC初始化及bean依赖关系剖析">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://www.gocody.net/9ce2b14f/">
+  <link rel="canonical" href="http://www.gocody.net/Spring IOC初始化源码分析（一） - singleton循环引用问题分析.html">
 
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.gocody.net/9ce2b14f/">
+    <link itemprop="mainEntityOfPage" href="http://www.gocody.net/Spring IOC初始化源码分析（一） - singleton循环引用问题分析.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cody">
@@ -404,6 +404,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  Spring IOC初始化及bean依赖关系剖析
+              </div>
           
 
         </div>
@@ -550,7 +554,7 @@ public class B{
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/6ea9a632/" rel="next" title="[Java] JVM系列之常用垃圾回收算法">
+              <a href="/JVM系列之常用垃圾回收算法.html" rel="next" title="[Java] JVM系列之常用垃圾回收算法">
                 <i class="fa fa-chevron-left"></i> [Java] JVM系列之常用垃圾回收算法
               </a>
             

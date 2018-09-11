@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JVM,GC,垃圾回收,算法,">
+  <meta name="keywords" content="Java, JVM, 垃圾回收， 垃圾回收算法">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="概述 做java的同学最常听见的就是java虚拟机里面的垃圾回收机制，其实垃圾回收的概念最先并不是java里首先提出来的，垃圾回收这个概念很早就已经被提出来了，并且在其他语言中得到广泛的应用，本篇文章将对市面上常用JVM中采用的垃圾回收算法进行介绍  常用垃圾回收算法标记 - 清除  这个方法将垃圾回收分为两个阶段：标记和清除 在标记阶段，通过”GC Root”根对象，标记所有从根节点开始可达到的">
-<meta name="keywords" content="JVM,GC,垃圾回收,算法">
+<meta name="description" content="Hostspot虚拟机常见垃圾回收算法简单总结">
+<meta name="keywords" content="Java, JVM, 垃圾回收， 垃圾回收算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Java] JVM系列之常用垃圾回收算法">
-<meta property="og:url" content="http://www.gocody.net/6ea9a632/index.html">
+<meta property="og:url" content="http://www.gocody.net/JVM系列之常用垃圾回收算法.html">
 <meta property="og:site_name" content="Cody&#39;s Blog">
-<meta property="og:description" content="概述 做java的同学最常听见的就是java虚拟机里面的垃圾回收机制，其实垃圾回收的概念最先并不是java里首先提出来的，垃圾回收这个概念很早就已经被提出来了，并且在其他语言中得到广泛的应用，本篇文章将对市面上常用JVM中采用的垃圾回收算法进行介绍  常用垃圾回收算法标记 - 清除  这个方法将垃圾回收分为两个阶段：标记和清除 在标记阶段，通过”GC Root”根对象，标记所有从根节点开始可达到的">
+<meta property="og:description" content="Hostspot虚拟机常见垃圾回收算法简单总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T07:03:29.266Z">
+<meta property="og:updated_time" content="2018-09-11T07:32:47.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Java] JVM系列之常用垃圾回收算法">
-<meta name="twitter:description" content="概述 做java的同学最常听见的就是java虚拟机里面的垃圾回收机制，其实垃圾回收的概念最先并不是java里首先提出来的，垃圾回收这个概念很早就已经被提出来了，并且在其他语言中得到广泛的应用，本篇文章将对市面上常用JVM中采用的垃圾回收算法进行介绍  常用垃圾回收算法标记 - 清除  这个方法将垃圾回收分为两个阶段：标记和清除 在标记阶段，通过”GC Root”根对象，标记所有从根节点开始可达到的">
+<meta name="twitter:description" content="Hostspot虚拟机常见垃圾回收算法简单总结">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://www.gocody.net/6ea9a632/">
+  <link rel="canonical" href="http://www.gocody.net/JVM系列之常用垃圾回收算法.html">
 
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.gocody.net/6ea9a632/">
+    <link itemprop="mainEntityOfPage" href="http://www.gocody.net/JVM系列之常用垃圾回收算法.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cody">
@@ -405,6 +405,10 @@
           
 
           
+              <div class="post-description">
+                  Hostspot虚拟机常见垃圾回收算法简单总结
+              </div>
+          
 
         </div>
       </header>
@@ -496,7 +500,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/9ce2b14f/" rel="prev" title="[Spring] Spring IOC初始化源码分析（一） - singleton循环引用问题分析">
+              <a href="/Spring IOC初始化源码分析（一） - singleton循环引用问题分析.html" rel="prev" title="[Spring] Spring IOC初始化源码分析（一） - singleton循环引用问题分析">
                 [Spring] Spring IOC初始化源码分析（一） - singleton循环引用问题分析 <i class="fa fa-chevron-right"></i>
               </a>
             
